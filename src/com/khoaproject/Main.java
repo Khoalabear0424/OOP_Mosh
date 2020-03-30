@@ -3,13 +3,20 @@ package com.khoaproject;
 public class Main {
 
     public static void main(String[] args) {
-        UIControl[] controls = {new TextBox(), new CheckBox()};
-        for( var control : controls)  {
-            control.render();
-        }
+        var calculator = new TaxCalculator2018(100_1000);
+        var report = new TaxReport();
+
+        report.show(calculator);
+        report.show(new TaxCalculator2019());
     }
 
-
+//    Final and Abstract Classes and Methods
+//    public static void main(String[] args) {
+//        UIControl[] controls = {new TextBox(), new CheckBox()};
+//        for( var control : controls)  {
+//            control.render();
+//        }
+//    }
 
     //Refactoring Towards OOD
 //    public static void main(String[] args) {
