@@ -1,8 +1,8 @@
 package com.khoaproject;
 
 public class MortgageCalculator {
-    private final static byte MONTHS_IN_YEAR = 12;
-    private final static byte PERCENT = 100;
+    private final byte MONTHS_IN_YEAR = 12;
+    private final byte PERCENT = 100;
     private int principal;
     private float annualInterest;
     private byte years;
