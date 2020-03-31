@@ -1,4 +1,4 @@
-package com.khoaproject;
+package com.khoaproject.fundamentals;
 
 public class MortgageCalculator {
     private final byte MONTHS_IN_YEAR = 12;

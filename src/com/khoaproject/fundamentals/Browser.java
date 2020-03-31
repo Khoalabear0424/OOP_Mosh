@@ -1,4 +1,4 @@
-package com.khoaproject;
+package com.khoaproject.fundamentals;
 
 public class Browser {
     public void navigate(String address) {

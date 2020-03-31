@@ -1,13 +1,14 @@
 package com.khoaproject;
 
+import com.khoaproject.exceptions.ExceptionsDemo;
+import com.khoaproject.fundamentals.TaxCalculator2018;
+import com.khoaproject.fundamentals.TaxCalculator2019;
+import com.khoaproject.fundamentals.TaxReport;
+
 public class Main {
 
     public static void main(String[] args) {
-        var calculator = new TaxCalculator2018(100_1000);
-        var report = new TaxReport();
-
-        report.show(calculator);
-        report.show(new TaxCalculator2019());
+        ExceptionsDemo.show();
     }
 
 //    Final and Abstract Classes and Methods

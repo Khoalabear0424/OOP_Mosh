@@ -1,4 +1,4 @@
-package com.khoaproject;
+package com.khoaproject.fundamentals;
 
 public class Employee {
     private int baseSalary;

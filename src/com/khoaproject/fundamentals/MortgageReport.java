@@ -1,4 +1,4 @@
-package com.khoaproject;
+package com.khoaproject.fundamentals;
 
 import java.text.NumberFormat;
 

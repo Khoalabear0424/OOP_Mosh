@@ -1,4 +1,4 @@
-package com.khoaproject;
+package com.khoaproject.fundamentals;
 
 public class Dragger {
     public void drag(Draggable widget){

@@ -1,4 +1,4 @@
-package com.khoaproject;
+package com.khoaproject.fundamentals;
 
 public class TaxCalculator2018 implements TaxCalculator{
     private double taxableIncome;
