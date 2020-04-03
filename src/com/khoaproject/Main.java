@@ -8,14 +8,16 @@ import com.khoaproject.fundamentals.TaxCalculator2019;
 import com.khoaproject.fundamentals.TaxReport;
 import com.khoaproject.generics.GenericList;
 import com.khoaproject.generics.List;
+import com.khoaproject.generics.User;
+import com.khoaproject.generics.Utils;
 
 import java.io.IOException;
 
 public class Main {
 
     public static void main(String[] args) {
-        var list = new GenericList<Integer>();
-        list.add(1);
+        var max1 = Utils.max(1,3);
+        var max2 = Utils.max(new User(10), new User(30));
     }
 
     //exceptions
