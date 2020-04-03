@@ -6,6 +6,7 @@ import com.khoaproject.exceptions.InsufficientFundsException;
 import com.khoaproject.fundamentals.TaxCalculator2018;
 import com.khoaproject.fundamentals.TaxCalculator2019;
 import com.khoaproject.fundamentals.TaxReport;
+import com.khoaproject.generics.GenericList;
 import com.khoaproject.generics.List;
 
 import java.io.IOException;
@@ -13,7 +14,7 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
-        var list = new List();
+        var list = new GenericList<Integer>();
         list.add(1);
     }
 
