@@ -1,15 +1,31 @@
 package com.khoaproject;
 
+import com.khoaproject.exceptions.AccountException;
 import com.khoaproject.exceptions.ExceptionsDemo;
+import com.khoaproject.exceptions.InsufficientFundsException;
 import com.khoaproject.fundamentals.TaxCalculator2018;
 import com.khoaproject.fundamentals.TaxCalculator2019;
 import com.khoaproject.fundamentals.TaxReport;
+import com.khoaproject.generics.List;
+
+import java.io.IOException;
 
 public class Main {
 
     public static void main(String[] args) {
-        ExceptionsDemo.show();
+        var list = new List();
+        list.add(1);
     }
+
+    //exceptions
+//    public static void main(String[] args) {
+//        try {
+//            ExceptionsDemo.show();
+//        } catch (AccountException e) {
+//            var cause = e.getCause();
+//            System.out.println(cause);
+//        }
+//    }
 
 //    Final and Abstract Classes and Methods
 //    public static void main(String[] args) {
