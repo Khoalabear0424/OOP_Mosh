@@ -20,6 +20,12 @@ public class Main {
         var max2 = Utils.max(new User(10), new User(30));
     }
 
+    //generic class
+//    public static void main(String[] args) {
+//        var max1 = Utils.max(1,3);
+//        var max2 = Utils.max(new User(10), new User(30));
+//    }
+
     //exceptions
 //    public static void main(String[] args) {
 //        try {
