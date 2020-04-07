@@ -16,9 +16,14 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
-        var max1 = Utils.max(1,3);
-        var max2 = Utils.max(new User(10), new User(30));
+        var list = new GenericList<String>();
+        list.add("A");
+        list.add("B");
+
+        for(var item : list)
+            System.out.println(item);
     }
+}
 
     //generic class
 //    public static void main(String[] args) {
@@ -55,4 +60,3 @@ public class Main {
 //        report.printMortgage();
 //        report.printPaymentSchedule();
 //    }
-}
