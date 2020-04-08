@@ -1,5 +1,6 @@
 package com.khoaproject;
 
+import com.khoaproject.OOP.LRUCache;
 import com.khoaproject.collections.CollectionsDemo;
 import com.khoaproject.exceptions.AccountException;
 import com.khoaproject.exceptions.ExceptionsDemo;
@@ -17,7 +18,10 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
-        CollectionsDemo.show();
+        var cache = new LRUCache(10);
+        cache.write("A", 1);
+        cache.write("B", 2);
+        cache.printCache();
     }
 }
 

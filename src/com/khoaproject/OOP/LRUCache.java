@@ -12,6 +12,14 @@ public class LRUCache {
     private ListNode tail = null;
     Map<String, ListNode> cache = new HashMap<String, ListNode>();
 
+    public void printCache() {
+        ListNode curr = head;
+        while(curr != null) {
+            System.out.println(curr.val);
+            curr = curr.next;
+        }
+    }
+
     public LRUCache(int capacity) {
         this.capacity = capacity;
     }
