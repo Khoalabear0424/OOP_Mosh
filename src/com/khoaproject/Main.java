@@ -1,5 +1,6 @@
 package com.khoaproject;
 
+import com.khoaproject.collections.CollectionsDemo;
 import com.khoaproject.exceptions.AccountException;
 import com.khoaproject.exceptions.ExceptionsDemo;
 import com.khoaproject.exceptions.InsufficientFundsException;
@@ -16,12 +17,7 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
-        var list = new GenericList<String>();
-        list.add("A");
-        list.add("B");
-
-        for(var item : list)
-            System.out.println(item);
+        CollectionsDemo.show();
     }
 }
 
