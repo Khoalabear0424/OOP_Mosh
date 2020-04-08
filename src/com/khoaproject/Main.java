@@ -21,6 +21,15 @@ public class Main {
         var cache = new LRUCache(10);
         cache.write("A", 1);
         cache.write("B", 2);
+        cache.write("C", 3);
+        cache.write("D", 4);
+        cache.printCache();
+
+        cache.delete("F");
+        cache.delete("C");
+        cache.printCache();
+
+        cache.read("B");
         cache.printCache();
     }
 }
