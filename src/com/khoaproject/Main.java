@@ -2,6 +2,7 @@ package com.khoaproject;
 
 import com.khoaproject.OOP.LRUCache;
 import com.khoaproject.collections.CollectionsDemo;
+import com.khoaproject.collections.Customer;
 import com.khoaproject.exceptions.AccountException;
 import com.khoaproject.exceptions.ExceptionsDemo;
 import com.khoaproject.exceptions.InsufficientFundsException;
@@ -9,28 +10,24 @@ import com.khoaproject.fundamentals.TaxCalculator2018;
 import com.khoaproject.fundamentals.TaxCalculator2019;
 import com.khoaproject.fundamentals.TaxReport;
 import com.khoaproject.generics.GenericList;
-import com.khoaproject.generics.List;
+
 import com.khoaproject.generics.User;
 import com.khoaproject.generics.Utils;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        var cache = new LRUCache(10);
-        cache.write("A", 1);
-        cache.write("B", 2);
-        cache.write("C", 3);
-        cache.write("D", 4);
-        cache.printCache();
-
-        cache.delete("F");
-        cache.delete("C");
-        cache.printCache();
-
-        cache.read("B");
-        cache.printCache();
+        List<Customer> customers = new ArrayList<>();
+        customers.add(new Customer("A"));
+        customers.add(new Customer("B"));
+        customers.add(new Customer("C"));
+        Collections.sort(customers);
     }
 }
 
