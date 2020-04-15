@@ -25,9 +25,10 @@ public class Main {
     public static void main(String[] args) {
         List<Customer> customers = new ArrayList<>();
         customers.add(new Customer("A"));
-        customers.add(new Customer("B"));
         customers.add(new Customer("C"));
+        customers.add(new Customer("B"));
         Collections.sort(customers);
+        System.out.println(customers);
     }
 }
 
