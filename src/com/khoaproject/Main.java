@@ -1,20 +1,8 @@
 package com.khoaproject;
 
-import com.khoaproject.OOP.LRUCache;
-import com.khoaproject.collections.CollectionsDemo;
 import com.khoaproject.collections.Customer;
-import com.khoaproject.exceptions.AccountException;
-import com.khoaproject.exceptions.ExceptionsDemo;
-import com.khoaproject.exceptions.InsufficientFundsException;
-import com.khoaproject.fundamentals.TaxCalculator2018;
-import com.khoaproject.fundamentals.TaxCalculator2019;
-import com.khoaproject.fundamentals.TaxReport;
-import com.khoaproject.generics.GenericList;
+import com.khoaproject.collections.EmailComparator;
 
-import com.khoaproject.generics.User;
-import com.khoaproject.generics.Utils;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -24,11 +12,11 @@ public class Main {
 
     public static void main(String[] args) {
         List<Customer> customers = new ArrayList<>();
-        customers.add(new Customer("A"));
-        customers.add(new Customer("C"));
-        customers.add(new Customer("B"));
-        Collections.sort(customers);
-        System.out.println(customers);
+        customers.add(new Customer("A", "e3"));
+        customers.add(new Customer("C", "e2"));
+        customers.add(new Customer("B", "e1"));
+//        Collections.sort(customers);
+        Collections.sort(customers, new EmailComparator());
     }
 }
 
