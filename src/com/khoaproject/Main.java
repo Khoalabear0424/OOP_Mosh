@@ -2,6 +2,7 @@ package com.khoaproject;
 
 import com.khoaproject.collections.Customer;
 import com.khoaproject.collections.EmailComparator;
+import com.khoaproject.collections.SetDemo;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,12 +12,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        List<Customer> customers = new ArrayList<>();
-        customers.add(new Customer("A", "e3"));
-        customers.add(new Customer("C", "e2"));
-        customers.add(new Customer("B", "e1"));
-//        Collections.sort(customers);
-        Collections.sort(customers, new EmailComparator());
+        var set = new SetDemo();
+        set.show();
     }
 }
 
