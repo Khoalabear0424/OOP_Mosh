@@ -4,9 +4,19 @@ import java.util.*;
 
 public class SetDemo {
     public static void show() {
-        Collection<String> collection = new ArrayList<>();
-        Collections.addAll(collection, "a","b","c","c");
-        Set<String> set = new HashSet<>(collection);
-        System.out.println(set);
+        Set<String> set1 = new HashSet<>(Arrays.asList("A","B","C"));
+        Set<String> set2 = new HashSet<>(Arrays.asList("B","C","D"));
+
+        //Union - combination of 2 sets
+        set1.addAll(set2);
+        System.out.println(set1);
+
+        //Intersection - common in both sets
+        set1.retainAll(set2);
+        System.out.println(set1);
+
+        //Difference - In one set but not in another set
+        set1.removeAll(set2);
+        System.out.println(set1);
     }
 }

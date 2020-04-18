@@ -2,18 +2,35 @@ package com.khoaproject;
 
 import com.khoaproject.collections.Customer;
 import com.khoaproject.collections.EmailComparator;
+import com.khoaproject.collections.MapDemo;
 import com.khoaproject.collections.SetDemo;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.io.FileReader;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        var set = new SetDemo();
-        set.show();
+        JSONParser parser = new JSONParser();
+        try {
+            Object obj = parser.parse(new FileReader("src/com/khoaproject/Restaurant/SampleMenu.json"));
+            JSONObject menuObj = (JSONObject) obj;
+            JSONArray categories = (JSONArray) menuObj.get("categorys");
+            System.out.println(categories);
+
+            Iterator<Object> iterator = categories.iterator();
+
+            while(iterator.hasNext()) {
+                System.out.println(iterator.next());
+            }
+
+            System.out.println(menuObj);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
 
