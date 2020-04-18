@@ -19,12 +19,20 @@ public class Main {
             Object obj = parser.parse(new FileReader("src/com/khoaproject/Restaurant/SampleMenu.json"));
             JSONObject menuObj = (JSONObject) obj;
             JSONArray categories = (JSONArray) menuObj.get("categorys");
-            System.out.println(categories);
 
             Iterator<Object> iterator = categories.iterator();
 
             while(iterator.hasNext()) {
-                System.out.println(iterator.next());
+                JSONObject menuItemsObject = (JSONObject) iterator.next();
+                JSONArray menuItems = (JSONArray) menuItemsObject.get("menu-items");
+
+                Iterator<Object> menuItemsIterator = menuItems.iterator();
+                while(menuItemsIterator.hasNext()) {
+                    JSONObject menuItem = (JSONObject) menuItemsIterator.next();
+
+                }
+
+                break;
             }
 
             System.out.println(menuObj);
