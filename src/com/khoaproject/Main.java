@@ -1,5 +1,6 @@
 package com.khoaproject;
 
+import com.khoaproject.Restaurant.Menu;
 import com.khoaproject.collections.Customer;
 import com.khoaproject.collections.EmailComparator;
 import com.khoaproject.collections.MapDemo;
@@ -21,16 +22,10 @@ public class Main {
             JSONArray categories = (JSONArray) menuObj.get("categorys");
 
             Iterator<Object> iterator = categories.iterator();
-
             while(iterator.hasNext()) {
                 JSONObject menuItemsObject = (JSONObject) iterator.next();
                 JSONArray menuItems = (JSONArray) menuItemsObject.get("menu-items");
-
-                Iterator<Object> menuItemsIterator = menuItems.iterator();
-                while(menuItemsIterator.hasNext()) {
-                    JSONObject menuItem = (JSONObject) menuItemsIterator.next();
-
-                }
+                var menu = new Menu(menuItems);
 
                 break;
             }
