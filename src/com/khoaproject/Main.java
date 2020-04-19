@@ -17,17 +17,15 @@ public class Main {
     public static void main(String[] args) {
         JSONParser parser = new JSONParser();
         try {
-            Object obj = parser.parse(new FileReader("src/com/khoaproject/Restaurant/SampleMenu.json"));
-            JSONObject menuObj = (JSONObject) obj;
+            JSONObject menuObj = (JSONObject) parser.parse(new FileReader("src/com/khoaproject/Restaurant/SampleMenu.json"));
             JSONArray categories = (JSONArray) menuObj.get("categorys");
 
-            Iterator<Object> iterator = categories.iterator();
-            while(iterator.hasNext()) {
-                JSONObject menuItemsObject = (JSONObject) iterator.next();
-                JSONArray menuItems = (JSONArray) menuItemsObject.get("menu-items");
-                var menu = new Menu(menuItems);
-
-                break;
+            for (Object category : categories) {
+                JSONObject categoryObj = (JSONObject) category;
+                String categoryName = (String) categoryObj.get("name");
+                JSONArray categoryItems = (JSONArray) categoryObj.get("menu-items");
+                var menu = new Menu((String) categoryName, categoryItems);
+                menu.showAppetizers();
             }
 
             System.out.println(menuObj);
@@ -36,6 +34,37 @@ public class Main {
         }
     }
 }
+
+/*
+
+CREATING MENU
+
+    public static void main(String[] args) {
+        JSONParser parser = new JSONParser();
+        try {
+            Object obj = parser.parse(new FileReader("src/com/khoaproject/Restaurant/SampleMenu.json"));
+            JSONObject menuObj = (JSONObject) obj;
+            JSONArray categories = (JSONArray) menuObj.get("categorys");
+
+            Iterator<Object> iterator = categories.iterator();
+            while(iterator.hasNext()) {
+                JSONObject menuItemsObject = (JSONObject) iterator.next();
+                JSONArray menuItems = (JSONArray) menuItemsObject.get("menu-items");
+                var menu = new Menu((String) menuItemsObject.get("name"), menuItems);
+            }
+
+            System.out.println(menuObj);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+ */
+
+
+
+
 
     //generic class
 //    public static void main(String[] args) {
