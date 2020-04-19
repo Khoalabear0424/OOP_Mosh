@@ -1,12 +1,12 @@
 package com.khoaproject.Restaurant;
 
 public class MenuItem {
-    String name;
+    String id;
     String type;
-    String price;
+    double price;
 
-    public MenuItem(String name, String type, String price) {
-        this.name = name;
+    public MenuItem(String id, String type, double price) {
+        this.id = id;
         this.type = type;
         this.price = price;
     }
@@ -14,7 +14,7 @@ public class MenuItem {
     @Override
     public String toString() {
         return "MenuItem{" +
-                "name='" + name + '\'' +
+                "name='" + id + '\'' +
                 ", type='" + type + '\'' +
                 ", price='" + price + '\'' +
                 '}';

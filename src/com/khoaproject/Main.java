@@ -19,16 +19,15 @@ public class Main {
         try {
             JSONObject menuObj = (JSONObject) parser.parse(new FileReader("src/com/khoaproject/Restaurant/SampleMenu.json"));
             JSONArray categories = (JSONArray) menuObj.get("categorys");
-
+            var menu = new Menu();
             for (Object category : categories) {
                 JSONObject categoryObj = (JSONObject) category;
                 String categoryName = (String) categoryObj.get("name");
                 JSONArray categoryItems = (JSONArray) categoryObj.get("menu-items");
-                var menu = new Menu((String) categoryName, categoryItems);
-                menu.showAppetizers();
+                menu.populateMenu(categoryName, categoryItems);
             }
 
-            System.out.println(menuObj);
+            menu.presentMenu();
         } catch (Exception e) {
             e.printStackTrace();
         }
